@@ -6,7 +6,9 @@ public class Win {
         for (int row = 0; row < board.length; row++) {
            if (board[row][row] == 1) {
            result = (Win.monoHorizontal(board, row) || Win.monoVertical(board, row));
-                    break;
+           if (result) {
+               break;
+           }
            }
         }
         return result;
