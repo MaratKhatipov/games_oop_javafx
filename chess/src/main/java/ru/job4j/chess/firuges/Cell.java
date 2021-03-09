@@ -28,7 +28,9 @@ public enum Cell {
 
     public static Cell findBy(int x, int y) {
         Cell rsl = null;
-        for (Cell cell : values()) {
+        Cell[] values = values();
+        for (int i = 0, valuesLength = values.length; i < valuesLength; i++) {
+            Cell cell = values[i];
             if (cell.x == x && cell.y == y) {
                 rsl = cell;
                 break;
