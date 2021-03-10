@@ -49,16 +49,11 @@ public class BishopBlackTest {
 		assertThat(wayBishop, is(destBishop));
 	}
 
-	@Test
+	@Test (expected = ImpossibleMoveException.class)
 	public void testWayException() {
-		int result = 0;
-		try {
 			BishopBlack bishop = new BishopBlack(A1);
 			Cell[] wayBishop = bishop.way(H1);
-		} catch (ImpossibleMoveException e) {
-			result = 1;
-		}
-		assertThat(result, is(1));
+
 	}
 
 	@Test
